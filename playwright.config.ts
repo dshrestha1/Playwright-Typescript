@@ -28,8 +28,8 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-   // baseURL: process.env.BASE_URL || undefined,
-    baseURL: process.env.BASE_URL,
+    baseURL: 'https://www.saucedemo.com',
+    // baseURL: process.env.BASE_URL,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     testIdAttribute: 'data-test',// Added manually, this will allow In your html you can now use data-pw as your test id instead of the default data-testid
