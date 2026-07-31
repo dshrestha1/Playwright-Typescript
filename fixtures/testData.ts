@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
+import { ProductSortingPage } from '../pages/ProductSortingPage';
 
 
 
@@ -21,6 +22,7 @@ type TestFixtures = {
     cartPage: CartPage
     checkoutPage: CheckoutPage
     checkoutUser: CheckoutUser
+    productSortingPage: ProductSortingPage
 
 };
 
@@ -52,7 +54,11 @@ export const  test = base.extend<TestFixtures>({
         });
             
         }
+    },
+    productSortingPage: async({page}, use)=> {
+        await use(new ProductSortingPage(page))
     }
+
 });
 
 
