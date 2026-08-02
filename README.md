@@ -36,7 +36,7 @@ The framework is designed to be:
 # 📂 Project Structure
 
 ```
-playwright-saucedemo/
+playwrightTest/
 │
 ├── tests/                 # Test Scripts
 ├── pages/                 # Page Object Classes
