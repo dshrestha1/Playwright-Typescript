@@ -7,6 +7,7 @@ import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 import { ProductSortingPage } from '../pages/ProductSortingPage';
+import { HamburgerMenu } from '../pages/components/HamburgerMenu';
 
 
 
@@ -23,6 +24,7 @@ type TestFixtures = {
     checkoutPage: CheckoutPage
     checkoutUser: CheckoutUser
     productSortingPage: ProductSortingPage
+    hamburgerMenu: HamburgerMenu
 
 };
 
@@ -57,8 +59,11 @@ export const  test = base.extend<TestFixtures>({
     },
     productSortingPage: async({page}, use)=> {
         await use(new ProductSortingPage(page))
+    },
+    hamburgerMenu: async({page}, use)=> {
+        await use(new HamburgerMenu(page))
     }
-
+    
 });
 
 
